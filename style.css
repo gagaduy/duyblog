@@ -1686,10 +1686,15 @@ body {
   top: 80px;
   right: 20px;
   z-index: 999;
+  display: inline-block;   /* chỉ chiếm diện tích vừa đủ */
+  width: 50px;             /* ô vuông */
+  height: 50px;
 }
 
 .music-toggle img {
-  width: 50px;
+  width: 100%;             /* vừa khít ô vuông */
+  height: 100%;
+  object-fit: contain;     /* giữ tỉ lệ hình */
   cursor: pointer;
   transition: transform 0.3s ease;
 }
