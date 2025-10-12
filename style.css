@@ -1745,3 +1745,25 @@ code {
   border-radius: 5px;
 }
 
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .about-grid,
+  .skills-grid,
+  .blog-grid,
+  .contact-grid,
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 16px; /* giảm gap cho gọn */
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center; /* căn giữa nút */
+  }
+}
+
