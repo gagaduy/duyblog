@@ -1,0 +1,935 @@
+"
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dương Văn Duy - AI Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="music-toggle">
+        <img src="images/loa.png" alt="Bật nhạc" id="playButton">
+        <audio id="myAudio">
+            <source src="nhac.mp3" type="audio/mpeg">
+            Trình duyệt không hỗ trợ audio.
+        </audio>
+    </div>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo" onclick="scrollToSection('home')">
+                    <div class="logo-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <span class="logo-text">Dương Văn Duy
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <button onclick="scrollToSection('home')" class="nav-link active" data-section="home">HOME</button>
+                    <button onclick="scrollToSection('about')" class="nav-link" data-section="about">ABOUT ME</button>
+                    <button onclick="scrollToSection('blog')" class="nav-link" data-section="blog">BLOG</button>
+                    <button onclick="scrollToSection('contact')" class="nav-link"
+                        data-section="contact">CONTACT</button>
+                </nav>
+
+                <!-- Social Links -->
+                <div class="social-links">
+                    <a href="https://github.com/gagaduy" class="social-link" target="_blank">
+                        <img src="images/github.jpg" alt="github" class="social-img">
+                    </a>
+                    <a href="https://www.facebook.com/duy.duong.346987/" class="social-link" target="_blank">
+                        <img src="images/fb.png" alt="github" class="social-img">
+                    </a>
+                    <a href="https://leetcode.com/u/duongvanduy799/" class="social-link" target="_blank">
+                        <img src="images/leetcode-logo.png" alt="LeetCode" class="social-img">
+                    </a>
+                </div>
+
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav" id="mobileNav">
+                <button onclick="scrollToSection('home')" class="mobile-nav-link">HOME</button>
+                <button onclick="scrollToSection('about')" class="mobile-nav-link">ABOUT ME</button>
+                <button onclick="scrollToSection('blog')" class="mobile-nav-link">BLOG</button>
+                <button onclick="scrollToSection('contact')" class="mobile-nav-link">CONTACT</button>
+                <div class="mobile-social">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="bg-circle circle-1"></div>
+            <div class="bg-circle circle-2"></div>
+            <div class="bg-circle circle-3"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <!-- Badge -->
+                <div class="hero-badge">
+                    <i class="fas fa-sparkles"></i>
+                    <span>AI & Machine Learning Student</span>
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Dương Văn Duy</span>
+                </h1>
+                <img src="images/avatar1.png" alt="Dương Văn Duy" class="hero-image">
+
+                <!-- Tagline -->
+                <p class="hero-tagline">
+                    Đam mê xây dựng các hệ thống thông minh giải quyết các vấn đề thực tiễn.
+                </p>
+
+                <!-- Description -->
+                <p class="hero-description">
+                    Hiện đang học tại Trường Đại học Công nghệ, khám phá những lĩnh vực tiên phong của
+                    trí tuệ nhân tạo và xây dựng các giải pháp sáng tạo kết nối công nghệ với nhu cầu của con người.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('contact')">
+                        Kết nối với tôi
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-outline" onclick="window.open('resume.pdf', '_blank')">
+                        <i class="fas fa-download"></i>
+                        Xem hồ sơ
+                    </button>
+
+                </div>
+
+                <!-- Skills Preview -->
+                <div class="skills-preview">
+                    <div class="skill-card">
+                        <div class="skill-icon gradient-purple">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Machine Learning</h3>
+                        <p>TensorFlow, PyTorch</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon gradient-cyan">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Data Science</h3>
+                        <p>Python, Pandas, NumPy</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon gradient-emerald">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Deep Learning</h3>
+                        <p>Neural Networks, Computer Vision</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon gradient-purple">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Database</h3>
+                        <p>MySQL</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section
+    <section class="projects-section">
+        <div class="container">
+            Section Header -->
+    <!-- <div class="section-header">
+                <div class="section-badge">
+                    <span>Featured Work</span>
+                </div>
+                <h2 class="section-title">
+                    My <span class="gradient-text">Projects</span>
+                </h2>
+                <p class="section-description">
+                    Discover the AI and machine learning projects I've built to solve real-world challenges and push the
+                    boundaries of technology.
+                </p>
+            </div> -->
+
+    <!-- Projects Grid -->
+    <!-- <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop"
+                            alt="Smart Traffic Management System">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="action-btn"><i class="fas fa-external-link-alt"></i></button>
+                                <button class="action-btn"><i class="fab fa-github"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Traffic Management System</h3>
+                        <p>Built an AI-powered traffic optimization system using computer vision and reinforcement
+                            learning to reduce congestion by 30%.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Flask</span>
+                        </div>
+                        <div class="project-footer">
+                            <button class="view-details">
+                                View Details
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <div class="project-links">
+                                <button class="link-btn"><i class="fas fa-external-link-alt"></i></button>
+                                <button class="link-btn"><i class="fab fa-github"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=300&fit=crop"
+                            alt="Medical Image Analysis Tool">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="action-btn"><i class="fas fa-external-link-alt"></i></button>
+                                <button class="action-btn"><i class="fab fa-github"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Medical Image Analysis Tool</h3>
+                        <p>Developed a deep learning model for detecting anomalies in medical scans with 95% accuracy
+                            using CNN architecture.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="project-footer">
+                            <button class="view-details">
+                                View Details
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <div class="project-links">
+                                <button class="link-btn"><i class="fas fa-external-link-alt"></i></button>
+                                <button class="link-btn"><i class="fab fa-github"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=500&h=300&fit=crop"
+                            alt="Natural Language Chatbot">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="action-btn"><i class="fas fa-external-link-alt"></i></button>
+                                <button class="action-btn"><i class="fab fa-github"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Natural Language Chatbot</h3>
+                        <p>Created an intelligent chatbot using transformer models and fine-tuned it for customer
+                            service applications.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Transformers</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+                        <div class="project-footer">
+                            <button class="view-details">
+                                View Details
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <div class="project-links">
+                                <button class="link-btn"><i class="fas fa-external-link-alt"></i></button>
+                                <button class="link-btn"><i class="fab fa-github"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+    <!-- View All Projects Button -->
+    <!-- <div class="section-footer">
+                <button class="btn btn-outline-large">
+                    View All Projects
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <div class="section-badge purple">
+                    <i class="fas fa-heart"></i>
+                    <span>Get to Know Me</span>
+                </div>
+                <h2 class="section-title">
+                    Về <span class="gradient-text-purple">Tôi</span>
+                </h2>
+                <p class="section-description">
+                    "Đam mê AI, luôn tò mò học hỏi, và cam kết tạo ra những tác động tích cực thông qua công nghệ."
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <!-- Left Column -->
+                <div class="about-left">
+                    <!-- My Story -->
+                    <div class="about-card">
+                        <div class="card-header">
+                            <div class="card-icon gradient-purple">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h3>Câu Chuyện Của Tôi</h3>
+                        </div>
+                        <p>Tôi là sinh viên ngành Công Nghệ Thông Tin với niềm đam mê đặc biệt về Trí Tuệ Nhân Tạo (AI)
+                            và
+                            Học Máy. Hiện tại tôi đang theo học chương trình Cử nhân tại Đại học Hutech, và tôi rất
+                            hứng thú với tiềm năng của AI trong việc giải quyết những vấn đề phức tạp trong thế giới
+                            thực.</p>
+                        <div class="quote-box">
+                            <p>"Giao thoa giữa sáng tạo của con người và trí tuệ nhân tạo là nơi mà những đổi mới thú vị
+                                nhất xảy ra."</p>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="about-card">
+                        <div class="card-header">
+                            <div class="card-icon gradient-indigo">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Giáo dục</h3>
+                        </div>
+                        <div class="education-item">
+                            <h4>Sinh viên ngành Công Nghệ Thông Tin</h4>
+                            <p class="school">Đại học công nghệ Thành Phố Hồ Chí Minh - Hutech</p>
+                            <div class="edu-footer">
+                                <span class="year">2022 - 2026</span>
+                                <span class="gpa">GPA: 3.79/4.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="about-right">
+                    <!-- Achievements -->
+                    <div class="about-card">
+                        <div class="card-header">
+                            <div class="card-icon gradient-emerald">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h3>Thành tích</h3>
+                        </div>
+                        <div class="achievements-list">
+                            <div class="achievement-item">
+                                <i class="fas fa-award"></i>
+                                <span>Học bổng cao nhất - Top 10 HanwhaLife Financial Mentoring</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-award"></i>
+                                <span>Chung kết ươm mầm tương lai 2022</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-award"></i>
+                                <span>Chung kết Hutech Clash Race 2022</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-award"></i>
+                                <span>Giải nhì cờ tướng Quận Thủ Đức mùa hè năm 2017</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interests -->
+                    <div class="about-card">
+                        <div class="card-header">
+                            <div class="card-icon gradient-orange">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Sở thích</h3>
+                        </div>
+                        <div class="interests-grid">
+                            <span class="interest-tag">Machine Learning</span>
+                            <span class="interest-tag">Computer Vision</span>
+                            <span class="interest-tag">Natural Language Processing</span>
+                            <span class="interest-tag">Robotics</span>
+                            <span class="interest-tag">Khoa học máy tính</span>
+                            <span class="interest-tag">Giải LeetCode</span>
+                            <span class="interest-tag">Cầu lông, cờ tướng</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skills-section">
+                <div class="skills-header">
+                    <h3>Kỹ năng <span class="gradient-text">chuyên môn</span></h3>
+                    <p>Các công nghệ và công cụ tôi sử dụng một cách thuần thục</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming Languages</h4>
+                        <div class="skill-items">
+                            <div class="skill-item">Python</div>
+                            <div class="skill-item">C/C++</div>
+                            <div class="skill-item">JavaScript</div>
+                            <div class="skill-item">SQL</div>
+                            <div class="skill-item">Java</div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>AI/ML Frameworks</h4>
+                        <div class="skill-items">
+                            <div class="skill-item">TensorFlow</div>
+                            <div class="skill-item">PyTorch</div>
+                            <div class="skill-item">Scikit-learn</div>
+                            <div class="skill-item">Keras</div>
+                            <div class="skill-item">OpenCV</div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Data Tools</h4>
+                        <div class="skill-items">
+                            <div class="skill-item">Pandas</div>
+                            <div class="skill-item">NumPy</div>
+                            <div class="skill-item">Matplotlib</div>
+                            <div class="skill-item">Jupyter</div>
+                            <div class="skill-item">Apache Spark</div>
+                        </div>
+                    </div>
+                    <!-- <div class="skill-category">
+                        <h4>Cloud Platforms</h4>
+                        <div class="skill-items">
+                            <div class="skill-item">AWS</div>
+                            <div class="skill-item">Google Cloud</div>
+                            <div class="skill-item">Azure</div>
+                            <div class="skill-item">Hugging Face</div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <div class="section-badge emerald">
+                    <i class="fas fa-book-open"></i>
+                    <span>Latest Articles</span>
+                </div>
+                <h2 class="section-title">
+                    Blog <span class="gradient-text-emerald">của tôi</span>
+                </h2>
+                <p class="section-description">
+                    Chia sẻ những hiểu biết, hướng dẫn và suy nghĩ về trí tuệ nhân tạo, học máy và tương lai của công
+                    nghệ.
+                </p>
+            </div>
+
+            <!-- Blog Posts Grid -->
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/JavaBasics1.jpg" alt="Java Basic">
+                        <div class="blog-category">Java Tutorial</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> October 3, 2025</span>
+                            <span><i class="fas fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h3>Java basic</h3>
+                        <p>Cùng làm quen với những khái niệm cơ bản nhất về Java và OOP</p>
+                        <button class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/OOP1.png" alt="OOP">
+                        <div class="blog-category">Java Tutorial</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> October 3, 2025</span>
+                            <span><i class="fas fa-clock"></i> 12 min read</span>
+                        </div>
+                        <h3>OOP - lập trình hướng đối tượng</h3>
+                        <p>Những khái niệm cơ bản giúp mọi người hiểu thêm về thế nào là OOP</p>
+                        <button class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/Collections Framework.png" alt="Collections Framework">
+                        <div class="blog-category">Java Tutorial</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> October 3, 2025</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3>Collections Framework</h3>
+                        <p>Collections Framework là bộ công cụ trong Java cung cấp các cấu trúc dữ liệu và thuật toán
+                            sẵn có, giúp việc lưu trữ, tìm kiếm và quản lý dữ liệu trở nên dễ dàng và hiệu quả hơn.</p>
+                        <button class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="blog-card hidden" data-blog="leetcode">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400&h=250&fit=crop"
+                            alt="LeetCode Journey">
+                        <div class="blog-category">Experience</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> October 3, 2025</span>
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3>LeetCode - Hành trình từ Zero đến Hero</h3>
+                        <p>Chia sẻ kinh nghiệm học LeetCode từ những ngày đầu bỡ ngỡ đến khi giải được hơn 100 bài
+                            Medium.</p>
+                        <button class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="blog-card hidden" data-blog="hanwhalife">
+                    <div class="blog-image">
+                        <img src="images/HL1.jpg" alt="HanwhaLife Financial Mentor">
+                        <div class="blog-category">Experience</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> October 3, 2025</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3>HanwhaLife Financial Mentor</h3>
+                        <p>Chia sẻ hành trình tham gia chương trình Financial Mentor, từ những thách thức đến bài học
+                            quý giá về tài chính và phát triển bản thân.</p>
+                        <button class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="blog-card hidden" data-blog="API">
+                    <div class="blog-image">
+                        <img src="images/Streams API & Lambda.png"
+                            alt="Streams API & Lambda – Map, Filter, Reduce, Lambda Expressions">
+                        <div class="blog-category">Java Tutorial</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> October 3, 2025</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3>Streams API & Lambda – Map, Filter, Reduce, Lambda Expressions</h3>
+                        <p>Streams API kết hợp với Lambda Expressions cho phép thao tác dữ liệu một cách khai báo, rõ
+                            ràng và hiệu quả hơn, đặc biệt trong các tác vụ như duyệt, lọc, biến đổi và tổng hợp dữ
+                            liệu.</p>
+                        <button class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="blog-card hidden" data-blog="JS Basics">
+                    <div class="blog-image">
+                        <img src="images/JS Basics.png" alt="JS Basics – Biến, hàm, vòng lặp, object, array">
+                        <div class="blog-category">JavaScript Tutorial</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> October 3, 2025</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3>JS Basics – Biến, hàm, vòng lặp, object, array</h3>
+                        <p>Học cơ bản về biến, hàm, vòng lặp, object và array trong JavaScript giúp bạn xử lý dữ liệu,
+                            tổ chức logic chương trình và xây dựng các ứng dụng web hiệu quả.</p>
+                        <button class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="blog-card hidden" data-blog="Exception Handling">
+                    <div class="blog-image">
+                        <img src="images/Exception Handling.png" alt="Exception Handling">
+                        <div class="blog-category">Java Tutorial</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> October 3, 2025</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3>Exception Handling</h3>
+                        <p>Xử lý ngoại lệ giúp chương trình an toàn hơn bằng cách bắt các lỗi xảy ra trong quá trình
+                            thực thi và xử lý chúng hợp lý, thay vì để chương trình bị dừng đột ngột.</p>
+                        <button class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="blog-card hidden" data-blog="DOM Manipulation">
+                    <div class="blog-image">
+                        <img src="images/DOM Manipulation.webp"
+                            alt="DOM Manipulation – querySelector, innerHTML, event listeners">
+                        <div class="blog-category">JavaScript Tutorial</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> October 3, 2025</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3>DOM Manipulation</h3>
+                        <p>DOM Manipulation giúp thay đổi nội dung, cấu trúc và kiểu dáng của trang web bằng JavaScript,
+                            tạo ra các hiệu ứng và tương tác động cho người dùng.</p>
+                        <button class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="blog-card hidden" data-blog="ES6">
+                    <div class="blog-image">
+                        <img src="images/ES6 Features.webp"
+                            alt="ES6 Features – let/const, arrow functions, template literals, destructuring">
+                        <div class="blog-category">Java Tutorial</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> October 3, 2025</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3>ES6 Features – let/const, arrow functions, template literals, destructuring</h3>
+                        <p>ES6 mang đến các tính năng hiện đại giúp viết JavaScript ngắn gọn, rõ ràng và dễ bảo trì hơn,
+                            bao gồm let/const để khai báo biến, arrow functions, template literals và destructuring để
+                            thao tác với mảng và object hiệu quả.</p>
+                        <button class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="blog-card hidden" data-blog="Async">
+                    <div class="blog-image">
+                        <img src="images/Async Programming.webp"
+                            alt="Async Programming – Callbacks, Promises, Async/Await, fetch API">
+                        <div class="blog-category">Java Tutorial</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> October 3, 2025</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3>Async Programming – Callbacks, Promises, Async/Await, fetch API</h3>
+                        <p>Async Programming trong JavaScript giúp xử lý các tác vụ bất đồng bộ như gọi API, đọc file
+                            hay timeout mà không làm tắc chương trình. Các công cụ phổ biến gồm callbacks, promises và
+                            async/await, giúp code rõ ràng và dễ bảo trì hơn.</p>
+
+                        <button class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- View All Articles Button -->
+            <div class="section-footer">
+                <button id="viewAllBtn" class="btn btn-primary-large">
+                    View All Articles
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Blog Modal -->
+        <div class="blog-modal" id="blogModal">
+            <div class="modal-overlay" onclick="closeBlogModal()"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Tiêu đề bài viết</h2>
+                    <button class="modal-close" onclick="closeBlogModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="Blog Image">
+                    <div class="modal-meta">
+                        <span id="modalCategory">Category</span>
+                        <span id="modalDate">Date</span>
+                        <span id="modalReadTime">Read Time</span>
+                    </div>
+                    <div class="modal-text">
+                        <p id="modalContent">Nội dung chi tiết bài viết sẽ hiển thị ở đây...</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="closeBlogModal()">
+                        Đóng
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <div class="section-badge blue">
+                    <i class="fas fa-comments"></i>
+                    <span>Let's Connect</span>
+                </div>
+                <h2 class="section-title">
+                    Liên hệ với <span class="gradient-text-blue">Tôi</span>
+                </h2>
+                <p class="section-description">
+                    “Bạn có dự án nào muốn triển khai? Muốn hợp tác hay chỉ đơn giản muốn nói xin chào? Mình rất vui
+                    được lắng nghe từ bạn!”
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <!-- Contact Details -->
+                    <div class="contact-card">
+                        <h3>Contact Information</h3>
+                        <div class="contact-items">
+                            <a href="mailto:duongvanduy799@gmail.com" class="contact-item">
+                                <div class="contact-icon gradient-blue">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="label">Email</span>
+                                    <span class="value">duongvanduy799@gmail.com</span>
+                                </div>
+                            </a>
+                            <a href="tel:+84 0589562483" class="contact-item">
+                                <div class="contact-icon gradient-emerald">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="label">Phone</span>
+                                    <span class="value">+84 0589562483</span>
+                                </div>
+                            </a>
+                            <a href="https://www.google.com/maps?q=Quận+Thủ+Đức,+Thành+Phố+Hồ+Chí+Minh" target="_blank"
+                                class="contact-item">
+                                <div class="contact-icon gradient-purple">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="label">Location</span>
+                                    <span class="value">Quận Thủ Đức, Thành Phố Hồ Chí Minh</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="contact-card">
+                        <h3>Follow Me</h3>
+                        <div class="social-grid">
+                            <a href="https://leetcode.com/u/duongvanduy799/" target="_blank" class="social-card">
+                                <img src="images/leetcode-logo.png" alt="LeetCode">
+                            </a>
+                            <a href="https://www.facebook.com/duy.duong.346987/" target="_blank" class="social-card">
+                                <img src="images/fb.png" alt="facebook">
+                            </a>
+                            <a href="https://github.com/gagaduy" target="_blank" class="social-card">
+                                <img src="images/github.jpg" alt="github">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="contact-card cta-card">
+                        <h3>Hãy Cùng Xây Dựng Điều Tuyệt Vời!</h3>
+                        <p>Mình luôn hứng thú với các dự án AI sáng tạo và mong muốn hợp tác với những người có cùng đam
+                            mê.</p>
+                        <div class="cta-tags">
+                            <span class="cta-tag">Sẵn sàng cho thực tập</span>
+                            <span class="cta-tag">Sẵn sàng hợp tác</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="contact-card">
+                        <h3>Gửi tin nhắn cho tôi</h3>
+                        <form action="save_message.php" method="POST" class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Tên của bạn</label>
+                                    <input type="text" id="name" name="name" placeholder="Dương Văn Duy" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Địa chỉ email</label>
+                                    <input type="email" id="email" name="email" placeholder="duongvanduy799@gmail.com"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Chủ đề</label>
+                                <input type="text" id="subject" name="subject" placeholder="Cùng nói về Python nào"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Tin nhắn</label>
+                                <textarea id="message" name="message" rows="5"
+                                    placeholder="Nói với tôi về dự án hoặc chỉ đơn giản là lời chào"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary-full">
+                                Gửi tin nhắn <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- chỗ hiển thị thông báo -->
+                <div id="notification"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Main Footer Content -->
+            <div class="footer-content">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <span class="logo-text">Dương Văn Duy</span>
+                    </div>
+                    <p class="footer-tagline">
+                        Đam mê xây dựng các hệ thống thông minh giải quyết các vấn đề thực tiễn.
+                    </p>
+                </div>
+
+                <!-- Footer Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><button onclick="scrollToSection('home')">Home</button></li>
+                        <li><button onclick="scrollToSection('about')">About Me</button></li>
+                        <li><button onclick="scrollToSection('blog')">Blog</button></li>
+                        <li><button onclick="scrollToSection('contact')">Contact</button></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer-section">
+                    <h3>Focus Areas</h3>
+                    <ul>
+                        <li><a href="#">Machine Learning</a></li>
+                        <li><a href="#">Deep Learning</a></li>
+                        <li><a href="#">Computer Vision</a></li>
+                        <li><a href="#">NLP</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Research</a></li>
+                        <li><a href="#">Publications</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <span>© 2025 Dương Văn Duy. Made with</span>
+                        <i class="fas fa-heart"></i>
+                        <span>and lots of ☕</span>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>"
