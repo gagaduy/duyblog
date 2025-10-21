@@ -1745,5 +1745,116 @@ code {
   border-radius: 5px;
 }
 
+/* Chứng chỉ */
+.certificate-section {
+  margin-top: 24px;
+}
 
+.certificate-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
 
+.certificate-row {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  flex-wrap: nowrap;            /* luôn giữ ngang */
+  overflow-x: auto;             /* nếu hẹp, có thể cuộn ngang */
+  padding-bottom: 8px;
+}
+
+.certificate-card {
+  flex: 0 0 32%;                /* mỗi item khoảng 1/3 chiều rộng */
+  min-width: 280px;             /* đảm bảo không quá nhỏ */
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;            /* hiển thị thumbnail gọn gàng */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.certificate-info {
+  padding: 10px 12px;
+}
+
+.certificate-info h4 {
+  font-size: 1rem;
+  margin: 0 0 4px 0;
+}
+
+.certificate-info p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Modal fullscreen */
+.cert-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;                /* ẩn mặc định */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 24px;
+}
+
+.cert-modal.open {
+  display: flex;                /* hiện khi mở */
+}
+
+.cert-modal img {
+  max-width: 95vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #fff;
+  border: none;
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.certificate-card img {
+  width: 100%;          /* chiếm hết chiều ngang khung */
+  height: auto;         /* giữ tỉ lệ ảnh */
+  margin: 0 auto;       /* căn giữa */
+  display: block;
+  flex: 0 0 220px;      /* mỗi thẻ rộng 220px */
+  max-width: 220px;
+}
+
+.certificate-section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}

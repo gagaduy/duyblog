@@ -1170,4 +1170,43 @@ btn.addEventListener("click", function() {
   }
 });
 
+// Mở modal khi bấm vào thẻ chứng chỉ
+document.querySelectorAll('.certificate-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const fullSrc = card.getAttribute('data-full');
+    const modal = document.getElementById('certModal');
+    const modalImg = document.getElementById('certModalImg');
+    modalImg.src = fullSrc;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+  });
+});
+
+// Đóng modal khi bấm nút đóng hoặc nền
+const modal = document.getElementById('certModal');
+const closeBtn = document.querySelector('.modal-close');
+
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.getElementById('certModalImg').src = '';
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.getElementById('certModalImg').src = '';
+  }
+});
+
+// Đóng bằng phím Esc
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal.classList.contains('open')) {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.getElementById('certModalImg').src = '';
+  }
+});
+
 
